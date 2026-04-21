@@ -24,7 +24,7 @@ html_show_sphinx = False
 try:
     version = importlib.metadata.version("openczjp")
 except importlib.metadata.PackageNotFoundError:
-    version = "0.0.0"
+    version = "0.0.1"
 
 # -- General configuration -----------------------------------------------------
 
@@ -33,7 +33,7 @@ except importlib.metadata.PackageNotFoundError:
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
-    "myst_parser",
+    "nbsphinx",
     "sphinx_design",
     "sphinx_copybutton",
     "sphinx.ext.intersphinx",
@@ -41,9 +41,12 @@ extensions = [
     # This allows you to create :::{todo} sections that will not be rendered
     # in the live docs if you want to leave notes for future work in the docs
     "sphinx.ext.todo",
+    "sphinx.ext.autodoc",
     # Auto generate docs
     "autoapi.extension",
+    "sphinxcontrib.bibtex",
 ]
+bibtex_bibfiles = ["../bibliography.bib"]
 
 # Support Markdown source files & rst for api docs
 source_suffix = [".rst", ".md"]
@@ -137,5 +140,5 @@ htmlhelp_basename = "openczjp_doc"
 
 
 intersphinx_mapping = {
-    "python": ("https://docs.python.org/", None),
+    "python": ("https://docs.python.org/3/", None),
 }

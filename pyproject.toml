@@ -61,6 +61,7 @@ dev = [
 ]
 
 docs = [
+    "nbsphinx",
     "sphinx~=8.0",
     "myst-parser>=4.0",
     "pydata-sphinx-theme>=0.16",
@@ -68,6 +69,7 @@ docs = [
     "sphinx-autoapi>=3.6.0",
     "sphinx-copybutton>=0.5.2",
     "sphinx-design>=0.6.1",
+    "sphinxcontrib.bibtex",
 ]
 
 build = [
@@ -147,6 +149,9 @@ builder = true
 # This table installs created the command hatch run install:check which will build and check your package.
 [tool.hatch.envs.build.scripts]
 check = [
+    "pandoc -f bibtex -t rst bibliography.bib --citeproc --csl .pandoc/styles/apa-no-initials.csl -o .pandoc/bibliography.rst",
+    "pandoc -f rst -t gfm .pandoc/READMEbody.rst .pandoc/bibliography.rst -o README.md",
+    "pip check",
     "hatch build {args:--clean}",
     "twine check dist/*",
 ]
