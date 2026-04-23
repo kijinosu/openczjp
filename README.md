@@ -43,4 +43,22 @@ fertility and population aging*.
 
 </div>
 
+<div id="ref-killian2019mapping" class="container csl-entry">
+
+Killian, Molly Sizer, & Tolbert, Charles M. (1993). Mapping social and
+economic space: The delineation of local labor markets in the united
+states. In Joachim Singelmann & Forrest A. Deseran (Eds.), *Inequality
+in labor market areas* (pp. 69–79). Boulder : Westview Press.
+
+</div>
+
+<div id="ref-tolbert1996commuting" class="container csl-entry">
+
+Tolbert, Charles M., & Sizer, Molly. (1996). *U.s. Commuting zones and
+labor market areas: A 1990 update* (Staff Report No. 673). United States
+Department of Agriculture, Economic Research Service.
+<https://doi.org/10.22004/ag.econ.278812>
+
+</div>
+
 </div>

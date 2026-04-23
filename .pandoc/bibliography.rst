@@ -27,3 +27,20 @@
       application to policies for coping with declining fertility and
       population aging*.
       https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-15H05692/.
+
+   .. container:: csl-entry
+      :name: ref-killian2019mapping
+
+      Killian, Molly Sizer, & Tolbert, Charles M. (1993). Mapping social
+      and economic space: The delineation of local labor markets in the
+      united states. In Joachim Singelmann & Forrest A. Deseran (Eds.),
+      *Inequality in labor market areas* (pp. 69–79). Boulder : Westview
+      Press.
+
+   .. container:: csl-entry
+      :name: ref-tolbert1996commuting
+
+      Tolbert, Charles M., & Sizer, Molly. (1996). *U.s. Commuting zones
+      and labor market areas: A 1990 update* (Staff Report No. 673).
+      United States Department of Agriculture, Economic Research
+      Service. https://doi.org/10.22004/ag.econ.278812

@@ -7,11 +7,15 @@ Welcome to openczjp's Documentation
    :caption: Contents:
 
    Home <self>
+   Development Notes <devnotes/index>
 
 
 --------
 Overview
 --------
+
+openczjp = Open Commuting Zones in Japan
+
 
 
 ------------
