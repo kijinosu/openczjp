@@ -1,0 +1,20 @@
+authors:
+    - family-names: Engel
+      given-names: Alan
+      orcid: "https://orcid.org/0000-0003-0070-2347"
+cff-version: 1.2.0
+title: "openczjp - a Python package to generate commuting zones for Japan based on population census data"
+type: software
+repository-code: https://github.com/kijinosu/openczjp
+license: MIT
+contact:
+    - email: "kijinosu@proton.me"
+      family-names: Engel
+      given-names: Alan
+keywords:
+  - MeSH: "Government Programs/statistics & numerical data"
+  - MeSH: "Statistics as Topic [E05.318.740]"
+  - MeSH: "Population Characteristics"
+  - Python
+version: 0.0.1
+

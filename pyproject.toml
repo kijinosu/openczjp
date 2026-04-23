@@ -13,14 +13,14 @@ requires = ["hatchling"]
 [project]
 name = "openczjp"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
-version = "0.1.0"
+version = "0.0.1"
 
 description = "A package to generate commuting zones for Japan based on population census data"
 authors = [
     { name = "Alan Engel", email = "kijinosu@proton.me" },
 ]
 license = "MIT"
-requires-python = ">= 3.11" # Adjust based on the minimum version of Python that you support
+requires-python = ">= 3.14" # Adjust based on the minimum version of Python that you support
 readme = {"file" = "README.md", "content-type" = "text/markdown"}
 # Please consult https://pypi.org/classifiers/ for a full list.
 classifiers = [
@@ -33,7 +33,18 @@ classifiers = [
 # TODO: add keywords
 keywords = []
 # TODO: add dependencies
-dependencies = []
+dependencies = [
+    "estatjp",    
+    "Sphinx>=3.5",
+    "docutils>=0.8,!=0.18.*,!=0.19.*",
+    "pybtex>=0.25",
+    "pybtex-docutils>=1.0.2",
+    "importlib_metadata>=3.6; python_version < '3.10'",
+    "pandas>=3.0.1",
+    "dotenv>=0.9.9",
+]
+exclude_patterns = ["_build"]
+bibtex_bibfiles = ["bibliography.bib"]
 
 [project.urls]
 Homepage = "https://github.com/kijinosu/openczjp"
@@ -50,6 +61,7 @@ dev = [
 ]
 
 docs = [
+    "nbsphinx",
     "sphinx~=8.0",
     "myst-parser>=4.0",
     "pydata-sphinx-theme>=0.16",
@@ -57,6 +69,7 @@ docs = [
     "sphinx-autoapi>=3.6.0",
     "sphinx-copybutton>=0.5.2",
     "sphinx-design>=0.6.1",
+    "sphinxcontrib.bibtex",
 ]
 
 build = [
@@ -66,6 +79,7 @@ build = [
 tests = [
     "pytest",
     "pytest-cov",
+    "sphinx-autoapi>=3.6.0",
 ]
 
 
@@ -122,14 +136,22 @@ installer = "uv"
 # This table installs the tools you need to test and build your package
 [tool.hatch.envs.build]
 description = """Test the installation the package."""
-dependency-groups = [
+dependencies = [
+    "pip",
+    "twine",
+]
+features = [
     "build",
 ]
+detached = true
 builder = true
 
 # This table installs created the command hatch run install:check which will build and check your package.
 [tool.hatch.envs.build.scripts]
 check = [
+    "pandoc -f bibtex -t rst bibliography.bib --citeproc --csl .pandoc/styles/apa-no-initials.csl -o .pandoc/bibliography.rst",
+    "pandoc -f rst -t gfm .pandoc/READMEbody.rst .pandoc/bibliography.rst -o README.md",
+    "pip check",
     "hatch build {args:--clean}",
     "twine check dist/*",
 ]
@@ -142,7 +164,7 @@ dependency-groups = [
 ]
 
 [[tool.hatch.envs.test.matrix]]
-python = ["3.11", "3.12", "3.13"]
+python = [ "3.14"]
 
 [tool.hatch.envs.test.scripts]
 run = "pytest {args:--cov=openczjp --cov-report=term-missing --cov-report=xml}"
@@ -176,3 +198,12 @@ dependency-groups = [
 
 [tool.hatch.envs.audit.scripts]
 check = ["pip-audit"]
+
+#----------------sphinxcontrib-bibtex--------------------------------#
+last = "sphinxcontrib.bibtex.style.names.last:LastNameStyle"
+
+[project.entry-points."sphinxcontrib.bibtex.style.referencing"]
+author_year = "sphinxcontrib.bibtex.style.referencing.author_year:AuthorYearReferenceStyle"
+foot = "sphinxcontrib.bibtex.style.referencing.foot:FootReferenceStyle"
+label = "sphinxcontrib.bibtex.style.referencing.label:LabelReferenceStyle"
+super = "sphinxcontrib.bibtex.style.referencing.super_:SuperReferenceStyle"

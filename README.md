@@ -1,33 +1,64 @@
-# Welcome to openczjp
+# openczjp
 
-|        |        |
-|--------|--------|
-| Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/openczjp.svg)](https://pypi.org/project/openczjp/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/openczjp.svg)](https://pypi.org/project/openczjp/)  |
-| Meta   | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
+[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json)](https://github.com/copier-org/copier)
 
-*TODO: the above badges that indicate python version and package version will only work if your package is on PyPI.
-If you don't plan to publish to PyPI, you can remove them.*
+## Requirement
 
-openczjp is a project that (describe what it does here).
+## Install this package
 
-## Get started
+    pip install openczjp
 
-You can install this package into your preferred Python environment using pip:
+## Example
 
-```bash
-$ pip install openczjp
-```
+### References
 
-TODO: Add a brief example of how to use the package to this section
+<div id="refs" class="container references csl-bib-body hanging-indent">
 
-To use openczjp in your code:
+<div id="ref-adachi_commuting_zone_japan" class="container csl-entry">
 
-```python
->>> import openczjp
->>> openczjp.hello_world()
-```
+Adachi, Daisuke. (2025). *Commuting zone japan*.
+<https://github.com/daisukeadachi/commuting_zone_japan>.
 
-## Copyright
+</div>
 
-- Copyright © 2026 Alan Engel.
-- Free software distributed under the [MIT License](./LICENSE).
+<div id="ref-adachi2020commuting" class="container csl-entry">
+
+Adachi, Daisuke, Fukai, Taiyo, Kawaguchi, Daiji, & Saito, Yukiko.
+(2020). *Commuting zones in japan* (RIETI Discussion Paper 20-E-021).
+Research Institute of Economy, Trade and Industry (RIETI).
+<https://www.rieti.go.jp/jp/publications/dp/20e021.pdf>
+
+</div>
+
+<div id="ref-ichimura_kakenhi_15h05692" class="container csl-entry">
+
+Ichimura, Hidehiko, Iwamoto, Yasushi, Usui, Emiko, Ogawa, Naohiro,
+Okumura, Tsunao, Kawaguchi, Daiji, Kitao, Sagiri, Sawada, Yasuyuki,
+Shimizutani, Satoshi, Takahashi, Sayuri, Matsukura, Rikiya, Yamaguchi,
+Shintaro, Yamada, Tomoaki, & Watanabe, Tsutomu. (2015). *Construction of
+policy-evaluation-oriented and heterogeneity-sensitive national transfer
+accounts and their application to policies for coping with declining
+fertility and population aging*.
+<https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-15H05692/>.
+
+</div>
+
+<div id="ref-killian2019mapping" class="container csl-entry">
+
+Killian, Molly Sizer, & Tolbert, Charles M. (1993). Mapping social and
+economic space: The delineation of local labor markets in the united
+states. In Joachim Singelmann & Forrest A. Deseran (Eds.), *Inequality
+in labor market areas* (pp. 69–79). Boulder : Westview Press.
+
+</div>
+
+<div id="ref-tolbert1996commuting" class="container csl-entry">
+
+Tolbert, Charles M., & Sizer, Molly. (1996). *U.s. Commuting zones and
+labor market areas: A 1990 update* (Staff Report No. 673). United States
+Department of Agriculture, Economic Research Service.
+<https://doi.org/10.22004/ag.econ.278812>
+
+</div>
+
+</div>
