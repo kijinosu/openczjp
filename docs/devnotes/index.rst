@@ -7,7 +7,7 @@ Development notes for openczjp
    :caption: Contents:
 
    Development Notes <self>
-   
+      
 
 
 --------
