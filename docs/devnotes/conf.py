@@ -24,7 +24,7 @@ html_show_sphinx = False
 try:
     version = importlib.metadata.version("openczjp")
 except importlib.metadata.PackageNotFoundError:
-    version = "0.0.1"
+    version = "0.0.2"
 
 # -- General configuration -----------------------------------------------------
 
@@ -46,7 +46,7 @@ extensions = [
     "autoapi.extension",
     "sphinxcontrib.bibtex",
 ]
-bibtex_bibfiles = ["../bibliography.bib"]
+bibtex_bibfiles = ["../../bibliography.bib"]
 
 # Support Markdown source files & rst for api docs
 source_suffix = [".rst", ".md"]
