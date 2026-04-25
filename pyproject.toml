@@ -74,6 +74,16 @@ docs = [
 ]
 
 build = [
+    "nbconvert",
+    "nbsphinx",
+    "sphinx~=8.0",
+    "myst-parser>=4.0",
+    "pydata-sphinx-theme>=0.16",
+    "sphinx-autobuild>=2024.10.3",
+    "sphinx-autoapi>=3.6.0",
+    "sphinx-copybutton>=0.5.2",
+    "sphinx-design>=0.6.1",
+    "sphinxcontrib.bibtex",
     "pip-audit",
     "twine",
 ]
@@ -186,7 +196,9 @@ dependency-groups = [
 [tool.hatch.envs.docs.scripts]
 build = [
     "pandoc -f bibtex -t rst bibliography.bib --citeproc --csl .pandoc/styles/apa-no-initials.csl -o .pandoc/bibliography.rst",
-    "pandoc -f rst -t gfm .pandoc/READMEbody.rst .pandoc/bibliography.rst -o README.md",
+    "pandoc -f rst -t gfm .pandoc/READMEbody.rst -o README.md",
+    "jupyter nbconvert --to html .notebooks/*.ipynb",
+    "mv -f .notebooks/*.html docs/_build/devnotes", # runs in Git bash terminal
     "sphinx-build {args:-W -b html docs docs/_build}"
     ]
 serve = ["sphinx-autobuild docs --watch src/openczjp {args:-b html docs/_build/serve}"]

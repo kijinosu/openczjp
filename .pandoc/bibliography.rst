@@ -24,6 +24,13 @@
       (RIETI). https://www.rieti.go.jp/jp/publications/dp/20e021.pdf
 
    .. container:: csl-entry
+      :name: ref-adachi2024robots
+
+      Adachi, Daisuke, Kawaguchi, Daiji, & Saito, Yukiko U. (2024).
+      Robots and employment: Evidence from japan, 1978–2017. *Journal of
+      Labor Economics*, *42*\ (2), 591–634.
+
+   .. container:: csl-entry
       :name: ref-fowler2024new
 
       Fowler, Christopher S. (2024). New commuting zone delineation for

@@ -7,10 +7,11 @@ openczjp
     :target: https://github.com/copier-org/copier
     :alt: Copier
 
-In 1987, the USDA's Economic Research Service (ERS) and its partners at land grant universities developed 'Commuting Zones' (CZ's) and 'Labor Market Areas' (LMA's) [tolbert1987labor] as delineated geographic areas for measuring integrated labor processes.
+--------
+Overview
+--------
 
-Requirement
------------
+openczjp = Open Commuting Zones in Japan
 
 
 
@@ -19,12 +20,11 @@ Install this package
 
 ::
 
-   pip install openczjp
-
-Example
--------
+   python -m pip install git+https://github.com/kijinosu/openczjp
 
 
+bibliography
+------------
 
-References
-==========
+
+

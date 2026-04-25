@@ -24,7 +24,7 @@ In 1987, the USDA's Economic Research Service (ERS) and its partners at land gra
 
 `Acemoglu et al (2016) <ref-acemoglu2016import_>`_ used CZs to analyse the effect of Chinese imports on employment in the United States and find that import growth from China between 1990 and 2011 led to an employment reduction of 2.4 million workers.
 
-Working from commuting data derived from Japanese population census microdata in relation to research on domestic fertility `Ichimura et al. (2025) <ref-ichimura_kakenhi_15h05692_>`_, `Adachi et al (2020) <ref-adachi2020commuting_>`_ delineated commuting zones in Japan using `Killian & Tolbert's (1993) <ref-killian1993mapping_>`_ methodology applied to municipalities. Adachi placed related data and code in the Github repository `computing_zone_japan`_.
+Working from commuting data derived from Japanese population census microdata in relation to research on domestic fertility `Ichimura et al. (2025) <ref-ichimura_kakenhi_15h05692_>`_, `Adachi et al (2020) <ref-adachi2020commuting_>`_ delineated commuting zones in Japan using `Killian & Tolbert's (1993) <ref-killian1993mapping_>`_ methodology applied to municipalities. Adachi placed related data and code in the Github repository `computing_zone_japan`_. `Adachi, Kawaguchi & Saito (2024) <ref-adachi2024robots_>`_ used these CZs in a shift-share analysis of the effects of robots on local labor markets in Japan.
 
 .. _computing_zone_japan: https://github.com/daisukeadachi/commuting_zone_japan
 
