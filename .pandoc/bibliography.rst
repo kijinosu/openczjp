@@ -8,6 +8,7 @@
       Price, Brendan. (2016). Import competition and the great US
       employment sag of the 2000s. *Journal of Labor Economics*,
       *34*\ (S1), S141–S198.
+      https://www.nber.org/system/files/working_papers/w20395/w20395.pdf
 
    .. container:: csl-entry
       :name: ref-adachi_commuting_zone_japan
@@ -29,6 +30,7 @@
       Adachi, Daisuke, Kawaguchi, Daiji, & Saito, Yukiko U. (2024).
       Robots and employment: Evidence from japan, 1978–2017. *Journal of
       Labor Economics*, *42*\ (2), 591–634.
+      https://daisukeadachi.github.io/assets/papers/robot_japan_latest.pdf
 
    .. container:: csl-entry
       :name: ref-fowler2024new

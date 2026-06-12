@@ -27,7 +27,7 @@ API_URLS: Final = {
 "Population_ja":"http://api.e-stat.go.jp/rest/3.0/app/getSimpleStatsData?cdCat01=A1101&cdTime={YEAR}100000&appId=&lang=J&statsDataId=0000020101&metaGetFlg=Y&cntGetFlg=N&explanationGetFlg=Y&annotationGetFlg=Y&sectionHeaderFlg=1&replaceSpChars=0"
 }
 """
-`API_URLS` are canned urls for API calls to e-Stat that are used in this module. They are coded with `typing.Final`_ to prevent redefinition. 
+`API_URLS` are canned urls for API calls to e-Stat that are used in this module. They are coded with `typing.Final`_ to prevent redefinition. These particular calls download a table of total populations simply because the API cannot download the index column by itself.
 
 .. _typing.Final: https://docs.python.org/3/library/typing.html#typing.Final
 
