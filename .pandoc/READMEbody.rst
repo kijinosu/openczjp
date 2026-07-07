@@ -2,16 +2,15 @@
 openczjp
 ========
 
-
-
 .. image:: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json
     :target: https://github.com/copier-org/copier
     :alt: Copier
 
 
+Overview
+--------
 
-Requirement
------------
+openczjp = Open Commuting Zones in Japan
 
 
 
@@ -20,11 +19,7 @@ Install this package
 
 ::
 
-   pip install openczjp
-
-Example
--------
-
+   python -m pip install git+https://github.com/kijinosu/openczjp
 
 
 References

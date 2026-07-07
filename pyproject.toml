@@ -13,28 +13,32 @@ requires = ["hatchling"]
 [project]
 name = "openczjp"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
-version = "0.0.1"
+version = "0.0.3.1"
 
 description = "A package to generate commuting zones for Japan based on population census data"
 authors = [
     { name = "Alan Engel", email = "kijinosu@proton.me" },
 ]
 license = "MIT"
-requires-python = ">= 3.14" # Adjust based on the minimum version of Python that you support
+requires-python = ">= 3.12" # Adjust based on the minimum version of Python that you support
 readme = {"file" = "README.md", "content-type" = "text/markdown"}
 # Please consult https://pypi.org/classifiers/ for a full list.
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
     "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database :: Front-Ends",
+    "Topic :: Sociology",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 # TODO: add keywords
 keywords = []
 # TODO: add dependencies
 dependencies = [
-    "estatjp",    
+    "estatjp>=0.1.5",  
     "Sphinx>=3.5",
     "docutils>=0.8,!=0.18.*,!=0.19.*",
     "pybtex>=0.25",
@@ -61,7 +65,10 @@ dev = [
 ]
 
 docs = [
+    "jupyter",
+    "nbconvert",
     "nbsphinx",
+    "ipython",
     "sphinx~=8.0",
     "myst-parser>=4.0",
     "pydata-sphinx-theme>=0.16",
@@ -79,6 +86,9 @@ build = [
 tests = [
     "pytest",
     "pytest-cov",
+    "pytest-raises",
+    "pytest-randomly",
+    "pytest-xdist",
     "sphinx-autoapi>=3.6.0",
 ]
 
@@ -125,6 +135,7 @@ precision = 2
 
 # Use UV to create Hatch environments
 [tool.hatch.envs.default]
+python = "3.12"
 installer = "uv"
 
 ################################################################################
@@ -135,6 +146,7 @@ installer = "uv"
 
 # This table installs the tools you need to test and build your package
 [tool.hatch.envs.build]
+python = "3.12"
 description = """Test the installation the package."""
 dependencies = [
     "pip",
@@ -158,13 +170,14 @@ check = [
 
 #--------------- Run tests ---------------#
 [tool.hatch.envs.test]
+python = "3.12"
 description = """Run the test suite."""
 dependency-groups = [
   "tests",
 ]
 
 [[tool.hatch.envs.test.matrix]]
-python = [ "3.14"]
+python = ["3.12","3.13","3.14"]
 
 [tool.hatch.envs.test.scripts]
 run = "pytest {args:--cov=openczjp --cov-report=term-missing --cov-report=xml}"
@@ -173,6 +186,7 @@ run = "pytest {args:--cov=openczjp --cov-report=term-missing --cov-report=xml}"
 
 # This sets up a hatch environment with associated dependencies that need to be installed
 [tool.hatch.envs.docs]
+python = "3.12"
 description = """Build or serve the documentation."""
 # Install optional dependency test for docs
 dependency-groups = [
@@ -183,7 +197,13 @@ dependency-groups = [
 # hatch run docs:build will build your documentation
 # hatch run docs:serve will serve them 'live' on your computer locally
 [tool.hatch.envs.docs.scripts]
-build = ["sphinx-build {args:-W -b html docs docs/_build}"]
+build = [
+    "pandoc -f bibtex -t rst bibliography.bib --citeproc --csl .pandoc/styles/apa-no-initials.csl -o .pandoc/bibliography.rst",
+    "pandoc -f rst -t gfm .pandoc/READMEbody.rst -o README.md",
+    "jupyter nbconvert --to html .notebooks/*.ipynb",
+    "mv -f .notebooks/*.html docs/devnotes", # runs in Git bash terminal
+    "sphinx-build {args:-W -b html docs docs/_build}"
+    ]
 serve = ["sphinx-autobuild docs --watch src/openczjp {args:-b html docs/_build/serve}"]
 
 
@@ -191,6 +211,7 @@ serve = ["sphinx-autobuild docs --watch src/openczjp {args:-b html docs/_build/s
 #--------------- Check security for your dependencies ---------------#
 
 [tool.hatch.envs.audit]
+python = "3.12"
 description = """Check dependencies for security vulnerabilities."""
 dependency-groups = [
     "build",
