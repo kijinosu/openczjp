@@ -1,4 +1,4 @@
-survey_year,muni_code,muni_name_en,muni_name_ja,population
+census_year,muni_code,muni_name_en,muni_name_ja,population
 1980,01100,Hokkaido Sapporo-shi,北海道 札幌市,1401757
 1985,01100,Hokkaido Sapporo-shi,北海道 札幌市,1542979
 1990,01100,Hokkaido Sapporo-shi,北海道 札幌市,1671742
