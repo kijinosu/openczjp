@@ -38,7 +38,7 @@ classifiers = [
 keywords = []
 # TODO: add dependencies
 dependencies = [
-    "estatjp",  
+    "estatjp>=0.1.5",  
     "Sphinx>=3.5",
     "docutils>=0.8,!=0.18.*,!=0.19.*",
     "pybtex>=0.25",
