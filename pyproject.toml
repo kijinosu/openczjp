@@ -65,6 +65,7 @@ dev = [
 ]
 
 docs = [
+    "jupyter",
     "nbconvert",
     "nbsphinx",
     "ipython",
@@ -189,8 +190,6 @@ python = "3.12"
 description = """Build or serve the documentation."""
 # Install optional dependency test for docs
 dependency-groups = [
-    "jupyter",
-    "nbconvert",
     "docs",
 ]
 
