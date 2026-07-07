@@ -77,7 +77,6 @@ nh3==0.3.4
 notebook==7.5.5
 notebook_shim==0.2.4
 numpy==2.4.4
-openczjp @ file:///C:/Users/Alan/Documents/GitHub/openczjp
 packaging==26.1
 pandas==3.0.2
 pandocfilters==1.5.1
