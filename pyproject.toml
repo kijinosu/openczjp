@@ -189,6 +189,8 @@ python = "3.12"
 description = """Build or serve the documentation."""
 # Install optional dependency test for docs
 dependency-groups = [
+    "jupyter",
+    "nbconvert",
     "docs",
 ]
 
@@ -196,7 +198,6 @@ dependency-groups = [
 # hatch run docs:build will build your documentation
 # hatch run docs:serve will serve them 'live' on your computer locally
 [tool.hatch.envs.docs.scripts]
-python = "3.12"
 build = [
     "pandoc -f bibtex -t rst bibliography.bib --citeproc --csl .pandoc/styles/apa-no-initials.csl -o .pandoc/bibliography.rst",
     "pandoc -f rst -t gfm .pandoc/READMEbody.rst -o README.md",

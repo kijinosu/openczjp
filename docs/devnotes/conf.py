@@ -24,7 +24,7 @@ html_show_sphinx = False
 try:
     version = importlib.metadata.version("openczjp")
 except importlib.metadata.PackageNotFoundError:
-    version = "0.0.2"
+    version = "0.0.3.1"
 
 # -- General configuration -----------------------------------------------------
 
