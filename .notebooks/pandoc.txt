@@ -1,0 +1,9 @@
+pandoc -f ipynb -t html '.notebooks\Notebook-1-municipal-codes.ipynb' -o 'docs\_build\devnotes\Notebook-1-municipal-codes.html'
+pandoc -f ipynb -t rst '.notebooks\Task-1-municipal-codes.ipynb' -o 'docs\devnotes\Task-1-municipal-codes.rst'
+pandoc -f ipynb -t gfm '.notebooks\Task-1-municipal-codes.ipynb' -o 'docs\devnotes\Task-1-municipal-codes.md'
+
+
+Move-Item -Force -Path .notebooks\*.html -Destination docs\_build\devnotes
+# for git bash
+jupyter nbconvert --to html .notebooks/*.ipynb
+mv -f .notebooks/*.html docs/_build/devnotes
